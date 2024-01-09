@@ -14,10 +14,18 @@
     --primery-color: #e6e4e6;
 }
 
+.dark-mode{
+    --primery-color: #0a0a0a;
+}
 
-html{
+.light-mode{
+    background-color: var(--primery-color);
+}
+
+body{
     background-color: var(--primery-color);
     overflow: hidden;
+    transition: .3s ease all;
 }
 
 .header{
