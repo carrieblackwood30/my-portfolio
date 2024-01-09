@@ -42,8 +42,9 @@ section{
 .navbar a::before{
     content: '';
     display: block;
+    padding: 1px;
     font-weight: 300;
-    border-top: 1px solid;
+    border-top: 2px solid;
     border-image: linear-gradient(to right, #6c3f32 50%, transparent 50%) 100% 1;
     width: 0;
     transition: .3s ease-in-out width;
@@ -52,9 +53,11 @@ section{
 .navbar a::after{
     content: '';
     display: block;
-    border-bottom: 1px solid;
+    padding: 1px;
+    font-weight: 300;
+    border-bottom: 2px solid;
     border-image: linear-gradient(to right, transparent 50%, #6c3f32 50%) 100% 1;
-    width: 0%;
+    width: 0;
     transition: .3s ease-in-out width;
 }
 
