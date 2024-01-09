@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+html{
+    background-color: #e6e4e6;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section{
+    margin: 2rem 0;
+}
+
+:root{
+    --color-black: #0a0a0a;
+    /* --border-hover: ; */
+}
+
+.navbar{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.logo{
+    padding-left: 1rem;
+}
+
+.navbar a::before{
+    content: '';
+    display: block;
+    font-weight: 300;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #6c3f32 50%, transparent 50%) 100% 1;
+    width: 0;
+    transition: .3s ease-in-out width;
+}
+
+.navbar a::after{
+    content: '';
+    display: block;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent 50%, #6c3f32 50%) 100% 1;
+    width: 0%;
+    transition: .3s ease-in-out width;
+}
+
+.navbar a:hover::after,.navbar a:hover::before{
+    width: 100%;
+}
+
+.hero-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.hero-block h3{
+    text-align: center;
+    font-size: 2rem;
+    max-width: 35rem;
+    margin: auto;
+}
+
+.circle{
+    border: 20px solid #ea9577;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    position: relative;
+    top: 10%; left: 75%; bottom: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    display: block;
+    transform-origin: -200% center;
+}
+
+.dot-linkedin, .dot-Instagram{
+    position: absolute;
+    overflow: hidden;
+    width: 20%;
+    height: 20%;
+    top: 0; left: 90%; bottom: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    display: block;
+    transform-origin: -210% center;
+    animation: circle 4s infinite linear;
+    transition: 1s ease-in-out transform;
+}
+
+.circle img{
+    transform: rotate(180deg);
+    border: 1px solid #e6e4e6;
+    border-radius: 50%;
+    background-color: #e6e4e6;
+}
+
+.circle:hover .dot-linkedin{
+    transform: rotate(180deg);
+}
+
+.circle:hover .dot-Instagram{
+    transform: rotate(150deg);
+}
+
+.hero-block-description{
+    padding: 5rem 10rem;
+    text-align: center;
+}
+
+.hero-block-description p{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+.hero-block-description .scroll-down{
+    margin: 2rem 0;
+}
