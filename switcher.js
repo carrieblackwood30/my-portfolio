@@ -1,17 +1,22 @@
-function darkMode() {
-    const body = document.body
-    const wasDarkMode = localStorage.getItem('darkmode') === 'true'
-
-    localStorage.setItem('darkmode', !wasDarkMode)
-    body.classList.toggle('dark-mode', !wasDarkMode)
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
 }
 
-// function lightMode() {
-//     const body = document.body
-//     const wasLightMode = localStorage.getItem('lightmode') === 'true'
+function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
+    }
+}
 
-//     body.classList.toggle('light-mode', !wasLightMode)
-// }
-
-// document.getElementById("darkModeJs").addEventListener("click", darkMode);
-// document.getElementById("LightModeJs").addEventListener("click", lightMode);
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+        document.getElementById('slider').checked = false;
+    } else {
+        setTheme('theme-light');
+      document.getElementById('slider').checked = true;
+    }
+})();

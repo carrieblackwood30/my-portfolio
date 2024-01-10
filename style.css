@@ -14,12 +14,16 @@
     --primery-color: #e6e4e6;
 }
 
-.dark-mode{
-    --primery-color: #0a0a0a;
+.theme-dark{
+    --primery-color: #2a2c2d;
+    --color-black: #fff;
+    --hero-circle-color: #fff;
+    --hero-arrrow-down-btn: invert(100%);
 }
 
-.light-mode{
+.theme-light{
     background-color: var(--primery-color);
+    --hero-circle-color: #ea9577;
 }
 
 body{
@@ -94,7 +98,7 @@ section{
 .light-switcher{
     font-size: 1rem;
     padding: 2px;
-    color: var(--color-black);
+    color: black;
     background: white;
 }
 
@@ -124,7 +128,7 @@ section{
 }
 
 .circle{
-    border: 20px solid #ea9577;
+    border: 20px solid var(--hero-circle-color);
     width: 40rem;
     height: 40rem;
     border-radius: 50%;
@@ -178,4 +182,14 @@ section{
 
 .hero-block-description .scroll-down{
     margin: 2rem 0;
+}
+
+.down-arrey img{
+    filter: var(--hero-arrrow-down-btn);
+    width: 100px;
+    transition: .3s ease-in-out all;
+}
+
+.down-arrey:hover img{
+    transform: translateY(10px);
 }
