@@ -84,6 +84,8 @@ section{
 }
 
 .switcher{
+    position: fixed;
+    z-index: 2;
     border: 3px ridge #0a0a0a;
     padding: .1rem;
 }
@@ -201,4 +203,73 @@ section{
 
 .about{
     margin: 8rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-text{
+    max-width: 50%;
+}
+
+.about-text h3{
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.about-text p{
+    margin: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.skills{
+    border-left: 1px solid var(--hero-circle-color);
+    padding: 1rem;
+}
+
+.skills h3{
+    margin: 1rem 1rem 5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skills .icon-container img{
+    width: 10rem;
+    padding: .5rem;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 20px #2a2c2d;
+    border-radius: 50%;
+    filter: var(--hero-arrrow-down-btn);
+}
+
+.icon-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.skills-red-circle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills-red-circles{
+    background: var(--hero-circle-color);
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    text-align: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.skills-red-circles p{
+    color: var(--primery-color);
 }
