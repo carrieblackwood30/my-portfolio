@@ -26,9 +26,14 @@
     --hero-circle-color: #ea9577;
 }
 
+html{
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--primery-color);
-    overflow: hidden;
+    overflow-x: hidden;
     transition: .3s ease all;
 }
 
@@ -192,4 +197,8 @@ section{
 
 .down-arrey:hover img{
     transform: translateY(10px);
+}
+
+.about{
+    margin: 8rem 0;
 }
