@@ -205,6 +205,7 @@ section{
     margin: 8rem 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about-text{
@@ -212,7 +213,7 @@ section{
 }
 
 .about-text h3{
-    margin: 1rem;
+    margin: 4rem 1rem;
     font-size: 2rem;
 }
 
@@ -223,7 +224,7 @@ section{
 }
 
 .skills{
-    border-left: 1px solid var(--hero-circle-color);
+    border-right: 1px solid var(--hero-circle-color);
     padding: 1rem;
 }
 
@@ -233,21 +234,35 @@ section{
     text-align: center;
 }
 
-.skills .icon-container img{
-    width: 10rem;
-    padding: .5rem;
-    border: 2px solid transparent;
-    box-shadow: 5px 5px 20px #2a2c2d;
-    border-radius: 50%;
-    filter: var(--hero-arrrow-down-btn);
-}
-
 .icon-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1rem;
     align-items: center;
     text-align: center;
+}
+
+.skills .icon-container img{
+    width: 5rem;
+    padding: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 5px 5px 20px #2a2c2d;
+    border-radius: 10%;
+    filter: var(--hero-arrrow-down-btn);
+    transition: .3s all;
+}
+
+.skills .icon-container .card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .icon-container .card:hover img{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 30px #2a2c2d;
 }
 
 .skills-red-circle{
